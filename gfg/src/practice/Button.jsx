@@ -1,20 +1,18 @@
+//Functional Component 
 import React from 'react'
 let count=0;
 //check on console using inspect
 export default function Button() {
-    //Button for increment
     const onIncrement=()=>{
         count+=1;
         console.log({count});
         
     }
-    //Button for Decrement
     const onDecrement=()=>{
         count-=1;
         console.log({count});
         
     }
-    //input function
     const onChange=(event)=>{
         console.log(event.target.value);
         
