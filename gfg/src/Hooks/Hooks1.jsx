@@ -8,7 +8,7 @@ function logname() {
 
 export default function Hooks1() {
   const [value, setvalue] = useState(100)
-  const [log, setlog] = useState(logname)
+  const [log, setlog ] = useState(logname)
   const onDecrement = ()=>{
     count=count-1;
     console.log({count});
