@@ -11,6 +11,7 @@ import Hooks1 from './Hooks/Hooks1';
 import Hooks2 from './Hooks/Hooks2';
 import Hooks3 from './Hooks/Hooks3';
 import BrandFilter from './Hooks/BrandFilter';
+import AddCart from './Hooks/AddCart';
 
 
 
@@ -60,6 +61,7 @@ function App() {
             <button onClick={() => navigate('/hooks2')}>Hooks2</button>-----------Hooks Basic part 2<br></br><br></br>
             <button onClick={() => navigate('/hooks3')}>Hooks3</button>-----------Hooks Basic part 3<br></br><br></br>
             <button onClick={() => navigate('/brandfilter')}>BrandFilter</button>-Mini_project_Brand_Filter<br></br><br></br>
+            <button onClick={() => navigate('/cart')}>Cart</button>-Mini_project_Add_to_Cart<br></br><br></br>
           </div>
           <div style={{ marginTop: '20px', width: '100%' }}>
             <Routes>
@@ -67,6 +69,7 @@ function App() {
               <Route path="/hooks2" element={<Hooks2 />} />
               <Route path="/hooks3" element={<Hooks3 />} />
               <Route path="/brandfilter" element={<BrandFilter />} />
+              <Route path="/cart" element={<AddCart />} />
             </Routes>
           </div>
         </div>
