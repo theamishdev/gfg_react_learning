@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
-var count = 0;
+/* Simple counter */                /* Shortcut key for comment---->  Alt+Shift+A */
 
+var count = 0;
 function logname() {
   return "Amish Naam toh suna hi hoga 😎 "
 }
@@ -14,7 +15,7 @@ export default function Hooks1() {
     console.log({count});
     setvalue(value-1)
     
-  }
+  }     
   const onIncrement = () => {
     count = count + 1;
     console.log({ count })

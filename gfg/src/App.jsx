@@ -8,11 +8,15 @@ import Header from './practice/Header'
 import Admin from './practice/Admin'
 import VirtualDOM from './practice/VirtualDOM';
 import Hooks1 from './Hooks/Hooks1';
+import Hooks2 from './Hooks/Hooks2';
+import Hooks3 from './Hooks/Hooks3';
+import BrandFilter from './Hooks/BrandFilter';
 
 
 
 
 
+/* Shortcut key for comment---->  Alt+Shift+A */
 //----------------------------------------------------------------------------------------------------------
 
 
@@ -52,11 +56,17 @@ function App() {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
           <h1>Hooks</h1>
           <div>
-            <button onClick={() => navigate('/hooks1')}>Hooks1</button>----------Hooks Basic part 1
+            <button onClick={() => navigate('/hooks1')}>Hooks1</button>----------Hooks Basic part 1<br></br><br></br>
+            <button onClick={() => navigate('/hooks2')}>Hooks2</button>-----------Hooks Basic part 2<br></br><br></br>
+            <button onClick={() => navigate('/hooks3')}>Hooks3</button>-----------Hooks Basic part 3<br></br><br></br>
+            <button onClick={() => navigate('/brandfilter')}>BrandFilter</button>-Mini_project_Brand_Filter<br></br><br></br>
           </div>
           <div style={{ marginTop: '20px', width: '100%' }}>
             <Routes>
               <Route path="/hooks1" element={<Hooks1 />} />
+              <Route path="/hooks2" element={<Hooks2 />} />
+              <Route path="/hooks3" element={<Hooks3 />} />
+              <Route path="/brandfilter" element={<BrandFilter />} />
             </Routes>
           </div>
         </div>
