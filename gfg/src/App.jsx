@@ -15,6 +15,7 @@ import AddCart from './Hooks/AddCart';
 import Timer from './Hooks/Timer';
 import Hooks4 from './Hooks/Hooks4';
 import Hooks5 from './Hooks/Hooks5';
+import Hooks6 from './Hooks/Hooks6';
 
 
 
@@ -65,6 +66,7 @@ function App() {
             <button onClick={() => navigate('/hooks3')}>Hooks3</button>-----------Hooks Basic part 3(useState)<br></br><br></br>
             <button onClick={() => navigate('/hooks4')}>Hooks4</button>-----------Hooks Basic part 4(useRef)<br></br><br></br>            
             <button onClick={() => navigate('/hooks5')}>Hooks5</button>-----------Hooks Basic part 5(useEffect)<br></br><br></br>            
+            <button onClick={() => navigate('/hooks6')}>Hooks6</button>-----------Hooks Basic part 6(useEffect--Async Await(use))<br></br><br></br>            
             <button onClick={() => navigate('/timer')}>Timer</button>-----------Timer<br></br><br></br>
             <button onClick={() => navigate('/brandfilter')}>BrandFilter</button>-Mini_project_Brand_Filter<br></br><br></br>
             <button onClick={() => navigate('/cart')}>Cart</button>-Mini_project_Add_to_Cart<br></br><br></br>
@@ -76,6 +78,7 @@ function App() {
               <Route path="/hooks3" element={<Hooks3 />} />
               <Route path="/hooks4" element={<Hooks4 />} />
               <Route path="/hooks5" element={<Hooks5 />} />
+              <Route path="/hooks6" element={<Hooks6 />} />
               <Route path="/timer" element={<Timer />} />
               <Route path="/brandfilter" element={<BrandFilter />} />
               <Route path="/cart" element={<AddCart />} />
