@@ -1,33 +1,14 @@
-import React, { useState, useRef } from 'react'
-
-export default function Hooks4() {
-  const [seconds, setSeconds] = useState(0)
-  const timerRef = useRef(null)
-
-  const startTimer = () => {
-    if (!timerRef.current) {
-      timerRef.current = setInterval(() => {
-        setSeconds(prev => prev + 1)
-      }, 1000) // 1 second interval
+import React from 'react'
+import {useRef} from 'react'
+export default function Hooks4() {    /* Functional compoonent can't be given useRef(It can be only done using react.forwardRef) */
+    const input=useRef()
+    const onFocus=()=>{
+        input.current.focus()
     }
-  }
-
-  const stopTimer = () => {
-    clearInterval(timerRef.current)
-    timerRef.current = null
-  }
-
-  const mins = Math.floor(seconds / 60)
-  const secs = seconds % 60
-
   return (
-    <>
-      <p>
-        Time: {String(mins).padStart(2, '0')} : {String(secs).padStart(2, '0')}
-      </p>
-
-      <button onClick={startTimer}>Start</button>
-      <button onClick={stopTimer}>Stop</button>
-    </>
+    <div>
+      <input ref={input} placeholder='search'/>
+      <button onClick={onFocus}>Focus on Input</button>
+    </div>
   )
 }

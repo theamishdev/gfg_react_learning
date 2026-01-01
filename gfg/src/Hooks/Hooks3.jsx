@@ -35,23 +35,40 @@ export default function Hooks3() {
     <p>{ch}</p>
     <div>
         <label>Name: </label>
-        <input  onChange={Namechange} placeholder='Enter Your name here here'/>
+        <input  onChange={Namechange} type='text' placeholder='Enter Your name here here'/>
     </div>
     <div>
         <label>Email: </label>
-        <input  onChange={Emailchange} placeholder='Enter Email here'/>
+        <input  onChange={Emailchange} type='email' placeholder='Enter Email here'/>
     </div>
 
     <div>
         <label>Contact: </label>
-        <input  onChange={Contactchange} placeholder='Enter Contact details here'/>
+        <input  onChange={Contactchange} type='number' placeholder='Enter Contact details here'/>
     </div>
 
     <div>
         <label>Password: </label>
-        <input  onChange={Passwordchange} placeholder='Enter your Password here'/>
+        <input  onChange={Passwordchange} type='text' placeholder='Enter your Password here'/>
     </div>
-
+         <table border="1" style={{ marginTop: "20px" }}>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{form.name}</td>
+            <td>{form.email}</td>
+            <td>{form.contact}</td>
+            <td>{form.password}</td>
+        </tr>
+    </tbody>
+      </table>
     </div>
   )
 }
