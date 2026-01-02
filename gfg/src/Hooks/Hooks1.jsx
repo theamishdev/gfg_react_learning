@@ -9,13 +9,13 @@ function logname() {
 
 export default function Hooks1() {
   const [value, setvalue] = useState(100)
-  const [log, setlog ] = useState(logname)
-  const onDecrement = ()=>{
-    count=count-1;
-    console.log({count});
-    setvalue(value-1)
-    
-  }     
+  const [log, setlog] = useState(logname)
+  const onDecrement = () => {
+    count = count - 1;
+    console.log({ count });
+    setvalue(value - 1)
+
+  }
   const onIncrement = () => {
     count = count + 1;
     console.log({ count })
@@ -24,11 +24,22 @@ export default function Hooks1() {
 
   // function logname removed from here
   return (
-    <>
-      <button onClick={onIncrement}>Increment</button>;<br></br>{count}<br></br>
-      <button onClick={onDecrement}>Decrement</button>
-      <div>value (using hooks ) is {value}</div>
-      <button onClick={() => setlog("Ab toh sun lia😂")}>{log}</button>
-    </>
+    <div className="component-container">
+      <h2 className="component-title">useState Basic (Hooks1)</h2>
+      <div style={{ marginBottom: '10px' }}>
+        <p>Global Count: {count} (Updates on console/re-render)</p>
+        <button onClick={onIncrement} className="styled-button">Increment</button>
+        <button onClick={onDecrement} className="styled-button">Decrement</button>
+      </div>
+
+      <div style={{ marginBottom: '10px', padding: '10px', background: '#333', borderRadius: '5px' }}>
+        <p>State Value: <strong>{value}</strong></p>
+      </div>
+
+      <div>
+        <button onClick={() => setlog("Ab toh sun lia😂")} className="styled-button">Change Log Text</button>
+        <p>{log}</p>
+      </div>
+    </div>
   )
 }

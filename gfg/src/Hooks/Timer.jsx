@@ -21,13 +21,18 @@ export default function Timer() {
   const secs = seconds % 60
 
   return (
-    <>
-      <p>
-        Time: {String(mins).padStart(2, '0')} : {String(secs).padStart(2, '0')}
-      </p>
+    <div className="component-container">
+      <h2 className="component-title">Timer Project</h2>
+      <div style={{ textAlign: 'center', margin: '20px 0' }}>
+        <p style={{ fontSize: '3rem', fontFamily: 'monospace', margin: '10px 0' }}>
+          {String(mins).padStart(2, '0')} : {String(secs).padStart(2, '0')}
+        </p>
 
-      <button onClick={startTimer}>Start</button>
-      <button onClick={stopTimer}>Stop</button>
-    </>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+          <button onClick={startTimer} className="styled-button" style={{ minWidth: '100px' }}>Start</button>
+          <button onClick={stopTimer} className="styled-button" style={{ minWidth: '100px' }}>Stop</button>
+        </div>
+      </div>
+    </div>
   )
 }

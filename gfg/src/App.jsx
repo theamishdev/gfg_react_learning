@@ -16,7 +16,8 @@ import Timer from './Hooks/Timer';
 import Hooks4 from './Hooks/Hooks4';
 import Hooks5 from './Hooks/Hooks5';
 import Hooks6 from './Hooks/Hooks6';
-
+import Cleanup from './Hooks/Cleanup';
+import Pincode from './Hooks/pincode';
 
 
 
@@ -33,7 +34,7 @@ function App() {
   const navigate = useNavigate();
   return (
     <>
-    HOOKS 1,2,3 are useState basic examples
+      HOOKS 1,2,3 are useState basic examples
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', alignItems: 'start', marginTop: '20px', gap: '20px' }}>
         {/* Left Side: Practice Buttons & Output */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
@@ -64,12 +65,13 @@ function App() {
             <button onClick={() => navigate('/hooks1')}>Hooks1</button>----------Hooks Basic part 1(useState)<br></br><br></br>
             <button onClick={() => navigate('/hooks2')}>Hooks2</button>-----------Hooks Basic part 2(useState)<br></br><br></br>
             <button onClick={() => navigate('/hooks3')}>Hooks3</button>-----------Hooks Basic part 3(useState)<br></br><br></br>
-            <button onClick={() => navigate('/hooks4')}>Hooks4</button>-----------Hooks Basic part 4(useRef)<br></br><br></br>            
-            <button onClick={() => navigate('/hooks5')}>Hooks5</button>-----------Hooks Basic part 5(useEffect)<br></br><br></br>            
-            <button onClick={() => navigate('/hooks6')}>Hooks6</button>-----------Hooks Basic part 6(useEffect--Async Await(use))<br></br><br></br>            
+            <button onClick={() => navigate('/hooks4')}>Hooks4</button>-----------Hooks Basic part 4(useRef)<br></br><br></br>
+            <button onClick={() => navigate('/hooks5')}>Hooks5</button>-----------Hooks Basic part 5(useEffect)<br></br><br></br>
+            <button onClick={() => navigate('/hooks6')}>Hooks6</button>-----------Hooks Basic part 6(useEffect--Async Await(use))<br></br><br></br>
             <button onClick={() => navigate('/timer')}>Timer</button>-----------Timer<br></br><br></br>
             <button onClick={() => navigate('/brandfilter')}>BrandFilter</button>-Mini_project_Brand_Filter<br></br><br></br>
             <button onClick={() => navigate('/cart')}>Cart</button>-Mini_project_Add_to_Cart<br></br><br></br>
+            <button onClick={() => navigate('/cleanup')}>Cleanup</button><br></br><br></br>
           </div>
           <div style={{ marginTop: '20px', width: '100%' }}>
             <Routes>
@@ -82,12 +84,21 @@ function App() {
               <Route path="/timer" element={<Timer />} />
               <Route path="/brandfilter" element={<BrandFilter />} />
               <Route path="/cart" element={<AddCart />} />
+              <Route path="/cleanup" element={<Cleanup />} />
             </Routes>
           </div>
         </div>
 
-        {/* Right Side: Empty for spacing */}
-        <div></div>
+        {/* Right Side: Pincode */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+          <h1>Hooks</h1>
+          <button onClick={() => navigate('/pincode')}>Pincode</button>
+          <div style={{ marginTop: '20px', width: '100%' }}>
+            <Routes>
+              <Route path="/pincode" element={<Pincode />} />
+            </Routes>
+          </div>
+        </div>
       </div>
     </>
   )

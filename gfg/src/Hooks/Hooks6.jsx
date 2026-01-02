@@ -18,11 +18,18 @@ export default function Hooks6() {
   }, [])
 
   return (
-    <div>
-      <button onClick={() => setcount(count + 1)}>click- {count}</button>
-      {quote.map(q => (
-        <p key={q.id}>{q.quote} — {q.author}</p>
-      ))}
+    <div className="component-container">
+      <h2 className="component-title">Axios Async/Await (Hooks6)</h2>
+      <button onClick={() => setcount(count + 1)} className="styled-button">Re-render Trigger: {count}</button>
+
+      <div style={{ maxHeight: '300px', overflowY: 'auto', marginTop: '15px' }}>
+        {quote.length > 0 ? quote.map(q => (
+          <div key={q.id} className="list-item">
+            <p style={{ margin: 0, fontStyle: 'italic' }}>"{q.quote}"</p>
+            <p style={{ margin: '5px 0 0', fontSize: '0.8rem', color: '#888', textAlign: 'right' }}>- {q.author}</p>
+          </div>
+        )) : <p>Loading quotes...</p>}
+      </div>
     </div>
   )
 }
