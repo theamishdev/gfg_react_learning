@@ -34,7 +34,6 @@ function App() {
   const navigate = useNavigate();
   return (
     <>
-      HOOKS 1,2,3 are useState basic examples
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', alignItems: 'start', marginTop: '20px', gap: '20px' }}>
         {/* Left Side: Practice Buttons & Output */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
